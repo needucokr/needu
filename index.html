@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('d1c05875f5458dc2b38b29139c80ae02');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '생일초대장',
+        description: '놀러오세요',
+        imageUrl:
+          '사진주소',
+        link: {
+          mobileWebUrl: 'https://cr.shopping.naver.com/adcr.nhn?x=D4LkCJS07xVJaeTS3sOxB%2F%2F%2F%2Fw%3D%3DsZna%2FbAn12mSXeano4kxfxGZwyAazTsussqcN0yjksVhDYU3%2Fa3t8jywTlpdmsrq%2FHiS8pIsOfwo9FCL8JsG8OuH40QJQxcHYiVu33qb%2Bu09WXtO%2FUYAc0oX99C9zgYLwLzMBgMtLPULltZxON9dp7sc%2BlP2IfMv0JNYXK9Cy6DgVBdieqJKEElnr%2BuN7h7aGBju2H9vlf%2B7%2FVgVUBSeHForiPkxPAXjk2LX8wmqtKDSHRSk4VUX1f2EFhaNIlVHrZoA9o7hPR%2BJeVcpgxDYAuW%2FOGdGsV4EVFAwlF8myHFQQhkkHXK4%2FmSRy5icYE%2F27BW36r4QZshREfg%2B3vq7RNqj48M2KpoGAos8aIlvl66mQJ0kQXcgUdrtQoV7lX7aMTr0aWdtr%2BFed8ykSREYzLb7Z2cx6uAd7vwJZsLXz%2FFroHZUE2fUd8%2FeMft9PDd2rYNVUHkwRQkahRMInnn1ZyM%2BE54CaRUw6tSjtfPq0AooSxxb8SCjNRMCQOMDTYtoLBb5iY3InvigN7jWeA89tUILPnYTx5YYAdQbTayGn5P9zaMq1mxS%2BI4eBJbUDm53oFt5T5LRYWRIfVMm%2F0NETivoAu2OFcN826zD%2FmsNrwOzomkhAdS4j7FEwFm%2BxEKtaifOvzZPiL%2BM%2B7TUCSz8N97JdukYlxHbZselWI1CRCJFLuCmKAG8iN5gVqlOf%2BXfob1NmOoRBMBsXNQGXzjfbC%2BFUQB%2FrDAzm2q1KHRsHkfE%3D&nvMid=85456622470&catId=50006995',
+          webUrl: 'https://cr.shopping.naver.com/adcr.nhn?x=D4LkCJS07xVJaeTS3sOxB%2F%2F%2F%2Fw%3D%3DsZna%2FbAn12mSXeano4kxfxGZwyAazTsussqcN0yjksVhDYU3%2Fa3t8jywTlpdmsrq%2FHiS8pIsOfwo9FCL8JsG8OuH40QJQxcHYiVu33qb%2Bu09WXtO%2FUYAc0oX99C9zgYLwLzMBgMtLPULltZxON9dp7sc%2BlP2IfMv0JNYXK9Cy6DgVBdieqJKEElnr%2BuN7h7aGBju2H9vlf%2B7%2FVgVUBSeHForiPkxPAXjk2LX8wmqtKDSHRSk4VUX1f2EFhaNIlVHrZoA9o7hPR%2BJeVcpgxDYAuW%2FOGdGsV4EVFAwlF8myHFQQhkkHXK4%2FmSRy5icYE%2F27BW36r4QZshREfg%2B3vq7RNqj48M2KpoGAos8aIlvl66mQJ0kQXcgUdrtQoV7lX7aMTr0aWdtr%2BFed8ykSREYzLb7Z2cx6uAd7vwJZsLXz%2FFroHZUE2fUd8%2FeMft9PDd2rYNVUHkwRQkahRMInnn1ZyM%2BE54CaRUw6tSjtfPq0AooSxxb8SCjNRMCQOMDTYtoLBb5iY3InvigN7jWeA89tUILPnYTx5YYAdQbTayGn5P9zaMq1mxS%2BI4eBJbUDm53oFt5T5LRYWRIfVMm%2F0NETivoAu2OFcN826zD%2FmsNrwOzomkhAdS4j7FEwFm%2BxEKtaifOvzZPiL%2BM%2B7TUCSz8N97JdukYlxHbZselWI1CRCJFLuCmKAG8iN5gVqlOf%2BXfob1NmOoRBMBsXNQGXzjfbC%2BFUQB%2FrDAzm2q1KHRsHkfE%3D&nvMid=85456622470&catId=50006995',
+        },
+      },
+      social: {
+        likeCount: 9999, //99999가 최대입니다
+        commentCount: 9999, //99999가 최대입니다
+        sharedCount: 9999, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '초대장 보러 가기',
+          link: {
+            mobileWebUrl: 'https://smartstore.naver.com/needucp/profile',
+            webUrl: 'https://smartstore.naver.com/needucp/profile',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
